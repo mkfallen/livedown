@@ -12,6 +12,7 @@ socket.on('content', function (data) {
   $('pre').each(function (_, block) {
     hljs.highlightBlock(block)
   })
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub])
 })
 
 socket.on('title', function (data) {
