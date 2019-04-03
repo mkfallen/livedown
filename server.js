@@ -11,6 +11,7 @@ var markdownIt = require('markdown-it')
 var markdownItTaskCheckbox = require('markdown-it-task-checkbox')
 var markdownItEmoji = require('markdown-it-emoji')
 var markdownItGitHubHeadings = require('markdown-it-github-headings')
+var markdownItMathJax = require('markdown-it-mathjax')
 
 var md = markdownIt({
   html: true,
@@ -21,6 +22,7 @@ md.use(markdownItEmoji)
 md.use(markdownItGitHubHeadings, {
   prefix: ''
 })
+md.use(markdownItMathJax)
 
 var app = express()
 var server = http.Server(app)
